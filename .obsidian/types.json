@@ -23,6 +23,16 @@
     "weekday": "text",
     "invariants": "multitext",
     "context": "text",
-    "close_note": "text"
+    "close_note": "text",
+    "excalidraw-plugin": "text",
+    "excalidraw-open-md": "checkbox",
+    "excalidraw-embed-md": "checkbox",
+    "excalidraw-default-mode": "text",
+    "excalidraw-export-transparent": "checkbox",
+    "excalidraw-export-dark": "checkbox",
+    "excalidraw-export-padding": "number",
+    "excalidraw-export-pngscale": "number",
+    "excalidraw-link-brackets": "checkbox",
+    "excalidraw-font": "text"
   }
 }

@@ -36,5 +36,6 @@
 | [0010](ADR-0010-installation-config.md) | Конфиг установки (`80-kernel/config.md`) | accepted | INV-1 INV-3 INV-18 |
 | [0011](ADR-0011-fpf-submodule-no-mcp.md) | FPF как submodule, без внешнего MCP | accepted | INV-1 INV-6 INV-7 INV-16 |
 | [0012](ADR-0012-obsidian-plugins-not-vendored.md) | Плагины Obsidian не вендорятся в git | accepted | INV-1 INV-3 INV-18 |
+| [0013](ADR-0013-workspace-layout-via-snapshot.md) | Раскладка Obsidian: именованный снимок, не живой `workspace.json` | accepted | INV-1 INV-3 |
 
 > Даты в шапках ADR — плейсхолдеры `<YYYY-MM-DD>`. При развёртывании проставь дату принятия: решение без даты не решение, а мнение.

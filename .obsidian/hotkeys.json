@@ -1,1 +1,11 @@
-{}
+{
+  "obsidian-git:push": [
+    { "modifiers": ["Mod", "Shift"], "key": "=" }
+  ],
+  "obsidian-git:pull": [
+    { "modifiers": ["Mod", "Shift"], "key": "-" }
+  ],
+  "templater-obsidian:create-new-note-from-template": [
+    { "modifiers": ["Mod"], "key": "N" }
+  ]
+}
