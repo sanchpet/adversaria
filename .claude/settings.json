@@ -1,0 +1,41 @@
+{
+  "$comment": "Память живёт в vault нативно (ADR-0005). ПУТЬ — ЕДИНСТВЕННЫЙ НЕПЕРЕНОСИМЫЙ ПАРАМЕТР: правится при развёртывании под фактическое место клона.",
+  "autoMemoryDirectory": "~/adversaria/70-memory",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Write|Edit|MultiEdit",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/check-naming.sh\""
+          },
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/check-task-card.sh\""
+          }
+        ]
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/80-kernel/scripts/orz-check.sh\""
+          }
+        ]
+      }
+    ],
+    "PreCompact": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "bash \"$CLAUDE_PROJECT_DIR/.claude/hooks/precompact-checkpoint.sh\""
+          }
+        ]
+      }
+    ]
+  }
+}

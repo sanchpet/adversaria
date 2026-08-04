@@ -1,0 +1,3 @@
+[submodule ".principles/fpf"]
+	path = .principles/fpf
+	url = https://github.com/ailev/FPF.git

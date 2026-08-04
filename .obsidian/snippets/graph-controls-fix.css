@@ -1,0 +1,20 @@
+/* Fix Retroma: панель настроек графа форсит светлый фон (oklch ...90%...) →
+   светлый текст на светлом, подписи Filters/Groups/Display/Forces не видны.
+   Возвращаем читаемый тёмный фон + нормальный текст (рамку/скругление темы не трогаем). */
+
+.graph-controls {
+  background-color: var(--background-secondary) !important;
+}
+
+.graph-controls,
+.graph-controls .tree-item-self,
+.graph-controls .setting-item-name,
+.graph-controls .graph-control-section-header,
+.graph-controls .setting-item-description,
+.graph-controls label {
+  color: var(--text-normal) !important;
+}
+
+.graph-controls .clickable-icon {
+  color: var(--text-muted) !important;
+}

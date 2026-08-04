@@ -1,0 +1,25 @@
+# Состояние UI Obsidian — машинно-специфично, меняется от каждого открытия панели
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+
+# Код плагинов и тем — не вендорим (ADR-0012). Список плагинов — в README.
+.obsidian/plugins/
+.obsidian/themes/
+
+# Клоны рабочих репозиториев: свои remote, свои коммиты. Трекаем только
+# mount-точку и её README — содержимое в этот репозиторий не входит.
+.repos/*
+!.repos/README.md
+
+# Локальная корзина Obsidian
+.trash/
+
+# Рабочий checkpoint агента — живёт между сжатиями контекста, не между сессиями
+.claude/checkpoint.md
+
+# Локальные переопределения настроек агента (машинно-специфичные пути, права)
+.claude/settings.local.json
+
+__pycache__/
+*.pyc
+.DS_Store

@@ -1,0 +1,38 @@
+filters:
+  and:
+    - file.inFolder("10-governance/tasks")
+    - note.type == "task"
+properties:
+  note.ticket:
+    displayName: Тикет
+  note.title:
+    displayName: Задача
+  note.status:
+    displayName: Статус
+  note.project:
+    displayName: Проект
+  note.verification_class:
+    displayName: Класс верификации
+  note.priority:
+    displayName: Приоритет
+views:
+  - type: cards
+    name: Доска (по статусу)
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - ticket
+      - title
+      - project
+  - type: table
+    name: Таблица
+    order:
+      - ticket
+      - title
+      - status
+      - project
+      - verification_class
+    sort:
+      - property: status
+        direction: ASC

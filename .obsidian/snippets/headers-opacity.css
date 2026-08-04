@@ -1,0 +1,11 @@
+.HyperMD-header-2, h2{
+    opacity: 85%;
+  }
+  
+  .HyperMD-header-3, h3{
+    opacity: 70%;
+  }
+  
+  .HyperMD-header-4, h4{
+    opacity: 50%;
+  }

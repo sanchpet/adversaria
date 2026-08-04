@@ -1,0 +1,35 @@
+/* CMENU */
+
+#cMenuToolbarModalBar.cMenuToolbarDefaultAesthetic{
+    border-top: 1px solid var(--background-modifier-border);
+}
+
+/* todoist */
+
+.is-live-preview .block-language-todoist{
+    padding-left: 0px;
+  }
+  
+  ul.todoist-task-list {
+    padding-inline-start: 0px !important;
+  }
+  
+  h4.todoist-query-title{
+    font-size: 22px !important;
+    font-weight: default !important;
+    /* color: white !important; */
+    opacity: default !important;
+  }
+  
+  .todoist-success {
+  margin-top: 4px;
+  padding: 0px 16px;
+  border-radius: 12px;
+  }
+
+  /* dataview */
+
+  .dataview .task-list-item-checkbox {
+    margin-right: 8px !important;
+    margin-left: -18px !important;
+  }

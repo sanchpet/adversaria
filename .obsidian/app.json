@@ -1,0 +1,12 @@
+{
+  "defaultViewMode": "preview",
+  "showInlineTitle": false,
+  "promptDelete": false,
+  "attachmentFolderPath": "80-kernel/attachments",
+  "alwaysUpdateLinks": true,
+  "trashOption": "local",
+  "newFileLocation": "folder",
+  "newFileFolderPath": "00-inbox",
+  "vimMode": false,
+  "autoConvertHtml": true
+}

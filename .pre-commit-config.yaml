@@ -1,0 +1,28 @@
+# Git-гейты (система-как-код, INV-17). Срабатывают ТОЛЬКО на файлах коммита —
+# pre-commit передаёт хукам staged-файлы. Ловят и агента, и правку руками в Obsidian.
+# Установка на чистом клоне: `pre-commit install`. См. ADR-0009.
+repos:
+  - repo: local
+    hooks:
+      - id: frontmatter-check
+        name: frontmatter — YAML-валидность + схема статусов (ADR-0007)
+        entry: python 80-kernel/scripts/frontmatter-check.py
+        language: python
+        additional_dependencies: ['pyyaml']
+        files: \.md$
+        exclude: '^(\.claude/|80-kernel/(scaffolds|templates)/|90-archive/)'
+        pass_filenames: true
+
+      - id: task-card-check
+        name: карточка задачи — тикет + предъявимый артефакт (ADR-0006)
+        entry: python3 80-kernel/scripts/task-card-check.py
+        language: system
+        files: '^10-governance/tasks/.*\.md$'
+        pass_filenames: true
+
+  # Секреты (INV-22). Второй рубеж после дисциплины «ссылки, не значения»:
+  # дисциплина ловит намерение, gitleaks ловит невнимательность.
+  - repo: https://github.com/gitleaks/gitleaks
+    rev: v8.28.0
+    hooks:
+      - id: gitleaks

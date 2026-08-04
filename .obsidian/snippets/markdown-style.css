@@ -1,0 +1,63 @@
+body {
+	--file-line-width: 750px !important;
+  /* word-spacing: 2px; */
+  letter-spacing: 0.25px;
+}
+
+ul {
+    list-style: disc;
+}
+
+.cm-comment{
+  opacity: 0.3;
+}
+
+.list-bullet:after{
+    /*
+    background-color: black;
+    */
+    width: 6px;
+    height: 6px;
+}
+
+input[type=checkbox] {
+    margin: 0 2px 0 0;
+}
+
+.markdown-source-view.mod-cm6 .task-list-item-checkbox{
+    margin-left: 0px;
+}
+
+.markdown-source-view.mod-cm6 .cm-line > * {
+    text-indent: 0px;
+}
+
+.markdown-rendered ul, .markdown-rendered ol {
+    padding-inline-start: 18px;
+    margin-block: auto;
+  }
+  
+.markdown-rendered table {
+    margin-block-start: 0em;
+}
+
+.cm-hashtag-begin, .cm-hashtag-end {
+    border-top-left-radius:4px; /* change to 4px for rectangular pills */
+    border-bottom-left-radius:4px; /* change to 4px for rectangular pills */
+    border-radius: 2px;
+    padding-top:2px;
+    padding-bottom:2px;
+}
+
+a, .cm-underline, .cm-underline:hover, a:hover, .cm-url, .cm-link, .cm-url:hover, .cm-hmd-internal-link, .cm-hmd-internal-link:hover{
+    text-underline-position: under !important;
+}
+
+p.speclist span ul li{
+    padding-top: 4px;
+    padding-bottom: 4px;
+  }
+  
+.list-bullet {
+    padding-right: 8px;
+}

@@ -1,0 +1,9 @@
+.cm-header-1, .cm-header-2, .cm-header-3, .cm-header-4, .cm-header-5, .cm-header-6{
+    font-size: 22px !important;
+    font-weight: 700;
+  }
+  
+  h1, h2, h3, h4, h5, h6, .HyperMD-header-1, .HyperMD-header-2, .HyperMD-header-3, .HyperMD-header-4, .HyperMD-header-5, .HyperMD-header-6{
+    font-size: 22px !important;;
+    font-weight: 700;
+  }

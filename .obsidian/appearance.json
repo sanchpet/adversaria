@@ -1,0 +1,18 @@
+{
+  "cssTheme": "",
+  "enabledCssSnippets": [
+    "headers-numbers",
+    "headers-opacity",
+    "headers-padding",
+    "markdown-style",
+    "obsidian-ui",
+    "plugins-style",
+    "properties",
+    "same-headers-size",
+    "codeblock",
+    "graph-controls-fix"
+  ],
+  "baseFontSize": 19,
+  "accentColor": "",
+  "theme": "obsidian"
+}

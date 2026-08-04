@@ -1,0 +1,9 @@
+{
+  // Клоны рабочих репозиториев лежат в .repos/ (dot-зона, gitignore родителя — ADR-0002).
+  // Родитель их не трекает; VSCode иначе показывает их файлы как ignored и не даёт
+  // Source Control по каждому. Явная регистрация обходит и глубину скана, и ignore-статус.
+  // Новый клон → дописать строку сюда.
+  "git.autoRepositoryDetection": true,
+  "git.repositoryScanMaxDepth": 3,
+  "git.scanRepositories": []
+}

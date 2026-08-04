@@ -1,0 +1,13 @@
+/* Disable word wrapping in multiline code blocks, keep inline code normal */
+pre > code {
+  white-space: pre !important;
+  overflow-x: auto;
+  display: block;
+}
+
+/* Keep inline code (single backtick) with default inline behavior */
+code:not(pre > code) {
+  white-space: normal !important;
+  overflow: visible !important;
+  display: inline !important;
+}

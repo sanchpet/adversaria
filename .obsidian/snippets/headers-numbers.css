@@ -1,0 +1,22 @@
+@container (min-width: 850px) {
+
+    .HyperMD-header-1:before, .HyperMD-header-2:before, .HyperMD-header-3:before, .HyperMD-header-4:before {
+      position: absolute;
+      opacity: 10%;
+      margin-left: -48px;
+      line-height: normal;
+    }
+  
+    .HyperMD-header-1:before {
+      content: "H1";
+    }
+    .HyperMD-header-2:before {
+      content: "H2";
+    }
+    .HyperMD-header-3:before {
+      content: "H3";
+    }
+    .HyperMD-header-4:before {
+      content: "H4";
+    }
+}

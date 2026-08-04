@@ -1,0 +1,11 @@
+.HyperMD-header-2, h2{
+    padding-left: 16px !important;
+  }
+  
+  .HyperMD-header-3, h3{
+    padding-left: 32px !important;
+  }
+  
+  .HyperMD-header-4, h4{
+    padding-left: 64px !important;
+  }

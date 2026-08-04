@@ -1,0 +1,28 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "tags": "tags",
+    "cssclasses": "multitext",
+    "type": "text",
+    "status": "text",
+    "ticket": "text",
+    "title": "text",
+    "tracker_url": "text",
+    "project": "text",
+    "artifact": "text",
+    "verification_class": "text",
+    "priority": "text",
+    "depends_on": "text",
+    "goal": "text",
+    "writer": "text",
+    "opened": "date",
+    "closed": "date",
+    "created": "date",
+    "date": "date",
+    "week": "text",
+    "weekday": "text",
+    "invariants": "multitext",
+    "context": "text",
+    "close_note": "text"
+  }
+}
