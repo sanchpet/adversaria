@@ -16,8 +16,9 @@
 
 | | |
 |---|---|
+| `start.md` | стартовая страница: задачи в работе, блокеры, доска, проекты, детекторы |
 | `00-inbox/` | захват до классификации |
-| `10-governance/` | `projects/` · `tasks/` · `sessions/` · `plans/` + стартовая страница `index.md` |
+| `10-governance/` | `projects/` · `tasks/` · `sessions/` · `plans/` |
 | `20-library/` | `notes/` · `drafts/` — письмо своими словами |
 | `30-knowledge/` | знание о работе: системы, технологии, контур |
 | `70-memory/` | память агента (нативно), индекс `MEMORY.md` |
@@ -38,12 +39,15 @@ cd adversaria
 # 1. Гейты на коммит (frontmatter, карточки задач, секреты)
 pre-commit install
 
-# 2. Плагины Obsidian — код не вендорится (ADR-0012), ставится один раз
+# 2. Плагины и тема Obsidian — код не вендорится (ADR-0012), ставится один раз
 #    Настройки → Community plugins → установить по списку .obsidian/community-plugins.json:
 #      dataview · templater-obsidian · homepage · obsidian-git
 #      obsidian-auto-link-title · url-into-selection · obsidian-excalidraw-plugin
+#      obsidian-style-settings · copy-url-in-preview
+#    Настройки → Appearance → Themes → установить Retroma
+#      (appearance.json уже указывает на неё; style-settings нужен именно теме)
 #    Templater: папка шаблонов → 80-kernel/templates
-#    Homepage: стартовая страница → 10-governance/index.md
+#    Homepage: стартовая страница → start.md
 ```
 
 Дальше правится **четыре места** — и больше ничего:

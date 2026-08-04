@@ -27,6 +27,7 @@ aliases: ["Конвенция метаданных", "ADR-0007"]
 | `knowledge` | `30-knowledge/` | `later` `in-progress` `processed` |
 | `adr` | `80-kernel/stele/` | `proposed` `accepted` `superseded ADR-NNNN` `withdrawn` |
 | `system` `config` | `80-kernel/` | — |
+| `registry-index` | корень (`start.md`) | — |
 
 - Род без схемы статусов в таблице статус **не проверяет** — правила не выдумываются под роды, где состояния нет.
 - `aliases` несут человекочитаемое (в том числе кириллическое) имя — см. ADR-0003.
