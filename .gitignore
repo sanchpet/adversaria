@@ -11,6 +11,9 @@
 .repos/*
 !.repos/README.md
 
+.repos-wip/*
+!.repos-wip/README.md
+
 # Локальная корзина Obsidian
 .trash/
 
