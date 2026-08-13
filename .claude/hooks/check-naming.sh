@@ -10,6 +10,14 @@ input=$(cat)
 path=$(printf '%s' "$input" | python3 -c "import sys,json; print(json.load(sys.stdin).get('tool_input',{}).get('file_path',''))" 2>/dev/null)
 [ -z "$path" ] && exit 0
 
+# ADR-0003 — конвенция имён этого vault, а не всеобщая. Файл вне него не наш:
+# без этой проверки префикс не срезается, rel остаётся абсолютным путём, и хук
+# начинает судить сторонние репозитории.
+case "$path" in
+  "$CLAUDE_PROJECT_DIR"/*) ;;
+  *) exit 0 ;;
+esac
+
 rel=${path#"$CLAUDE_PROJECT_DIR"/}
 
 # dot-зона и сторонние конфиги — не наши имена, пропускаем
