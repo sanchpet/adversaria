@@ -22,7 +22,7 @@ rel=${path#"$CLAUDE_PROJECT_DIR"/}
 
 # dot-зона и сторонние конфиги — не наши имена, пропускаем
 case "$rel" in
-  .obsidian/*|.git/*|.repos/*|.principles/*|.vscode/*) exit 0 ;;
+  .obsidian/*|.git/*|.repos/*|.repos-wip/*|.principles/*|.vscode/*) exit 0 ;;
 esac
 
 base=$(basename "$rel")
