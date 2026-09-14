@@ -22,7 +22,7 @@ aliases: ["Конвенция метаданных", "ADR-0007"]
 | `task` | `10-governance/tasks/` | `in-progress` `blocked` `done` `later` |
 | `project` | `10-governance/projects/` | `active` `paused` `done` |
 | `session` | `10-governance/sessions/` | — |
-| `dayplan` | `10-governance/plans/` | — |
+| `dayplan` `weekplan` | `10-governance/plans/` | — |
 | `note` `draft` | `20-library/` | `later` `in-progress` `processed` `done` |
 | `knowledge` | `30-knowledge/` | `later` `in-progress` `processed` |
 | `adr` | `80-kernel/stele/` | `proposed` `accepted` `superseded ADR-NNNN` `withdrawn` |
