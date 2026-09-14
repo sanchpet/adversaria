@@ -18,6 +18,13 @@ for f in 10-governance/plans/current/dayplan-*.md; do
   [ "$d" \< "$today" ] && flags+=("день $d не закрыт (DayPlan не в архиве) → /close")
 done
 
+# 1b. Незакрытая неделя: WeekPlan прошлой недели остался в current/ (архивирует пятничный /close, ADR-0018).
+cur_week=$(date +%G-W%V)
+for f in 10-governance/plans/current/weekplan-*.md; do
+  w=$(basename "$f" | sed -E 's/weekplan-(.+)\.md/\1/')
+  [ "$w" \< "$cur_week" ] && flags+=("неделя $w не закрыта (WeekPlan не в архиве) → /close")
+done
+
 # 2. Инбокс: записи старше недели — кандидаты в архив (strict-режим триажа).
 # Порог согласован с 80-kernel/docs/inbox-triage.md; правится там же и здесь за один коммит.
 stale=0

@@ -1,6 +1,8 @@
 ---
 type: project
 status: active
+priority: <1–5, 1 высший; степень а не ранг — уровень делится>
+priority_updated: <YYYY-MM-DD>
 goal: <цель работодателя своими словами — одна фраза>
 opened: <YYYY-MM-DD>
 aliases: ["<читаемое имя проекта>"]

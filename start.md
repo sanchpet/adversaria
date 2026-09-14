@@ -45,13 +45,15 @@ SORT file.name ASC
 
 ![[tasks.base]]
 
-## Проекты
+## Проекты по приоритету
+
+> `priority` 1–5, **1 высший**; степень, а не ранг — два проекта могут делить уровень. Назначает инженер, агент не переставляет. Порядок отсюда — вход в вёрстку недели: `/open` строит WeekPlan от него, а не от объёма остатков.
 
 ```dataview
-TABLE WITHOUT ID link(file.link, file.aliases[0]) AS "Проект", status AS "Статус", goal AS "Цель"
+TABLE WITHOUT ID link(file.link, file.aliases[0]) AS "Проект", priority AS "🚦", status AS "Статус", goal AS "Цель"
 FROM "10-governance/projects"
 WHERE type = "project" AND status != "done"
-SORT status ASC
+SORT priority ASC, status ASC
 ```
 
 ## Детекторы
@@ -64,6 +66,14 @@ SORT status ASC
 LIST
 FROM "10-governance/tasks"
 WHERE type = "task" AND !project AND status != "done"
+```
+
+**Проект без приоритета** — порядок недели не из чего собрать, и вёрстка молча вернётся к объёму остатков:
+
+```dataview
+LIST
+FROM "10-governance/projects"
+WHERE type = "project" AND status != "done" AND !priority
 ```
 
 **Инбокс старше недели** — род не присвоен за полный проход, ценность не подтверждена (→ `90-archive/`):
