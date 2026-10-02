@@ -42,6 +42,17 @@ if ! git diff --quiet HEAD -- 2>/dev/null || [ -n "$(git ls-files --others --exc
   flags+=("незакоммиченные изменения в vault → /checkpoint")
 fi
 
+# 4. Потолок памяти (ADR-0020): индекс грузится гарнитурой не целиком, обрезка беззвучна.
+ceiling=$(sed -n 's/^| `memory_ceiling` | `\([0-9]*\)\/\([0-9]*\)`.*/\1 \2/p' 80-kernel/config.md 2>/dev/null | head -1)
+if [ -n "$ceiling" ] && [ -f 70-memory/MEMORY.md ]; then
+  read -r max_n max_c <<<"$ceiling"
+  n=$(grep -c '^- \[' 70-memory/MEMORY.md || true)
+  c=$(LC_ALL=en_US.UTF-8 wc -m < 70-memory/MEMORY.md | tr -d ' ')
+  if [ "$n" -ge "$max_n" ] || [ "$c" -ge "$max_c" ]; then
+    flags+=("память на потолке: $n/$max_n записей, $c/$max_c знаков индекса → ревизия по ADR-0020 (/open, шаг триажа памяти)")
+  fi
+fi
+
 if [ ${#flags[@]} -gt 0 ]; then
   echo "⚠ Детектор ритма (INV-5/INV-9) — открытые рубежи:"
   for fl in "${flags[@]}"; do echo "  • $fl"; done

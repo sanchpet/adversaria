@@ -40,6 +40,7 @@
 | [0015](ADR-0015-skill-home-repo-or-marketplace.md) | Дом скилла: репозиторий или маркетплейс | accepted | INV-1 INV-2 INV-3 INV-18 INV-22 |
 | [0016](ADR-0016-knowledge-declares-its-own-routes.md) | Знание объявляет свой охват само, гейт называет его на первой правке | accepted | INV-2 INV-3 INV-16 INV-17 INV-18 |
 | [0018](ADR-0018-week-gets-an-opening.md) | Неделя получает Открытие: род `weekplan` | accepted | INV-2 INV-3 INV-5 INV-9 INV-17 INV-18 |
+| [0020](ADR-0020-memory-admits-by-cost-of-forgetting.md) | Память принимает по цене забвения, у неё есть потолок и выход | accepted | INV-3 INV-5 INV-16 INV-17 |
 
 > Даты в шапках ADR — плейсхолдеры `<YYYY-MM-DD>`. При развёртывании проставь дату принятия: решение без даты не решение, а мнение.
 
